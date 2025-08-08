@@ -1,6 +1,3 @@
-
-
-#!/usr/bin/env python3
 """
 Obsidian Vault Index Generator
 Prints a tree-like structure of all .md files in an Obsidian vault
@@ -107,11 +104,8 @@ def _print_tree(path, prefix="", is_last=True, show_empty_folders=True):
         new_prefix = prefix + extension if path != path.parent else ""
         _print_tree(item, new_prefix, is_last_item, show_empty_folders)
 
-
-# ========================================
-
-
-VAULT_PATH = "../../Josh's Vault" 
+# replace with your vault path
+VAULT_PATH = "" 
 
 def get_vault_path():
     """Get vault path from configuration or command line argument"""
