@@ -1,0 +1,23 @@
+/* Center all images in reading view */
+.markdown-preview-view img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Center all images in editing view */
+.markdown-source-view img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Center embedded images (wiki-link style) */
+.internal-embed img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Alternative - target all images universally */
+img {
+    display: block;
+    margin: 0 auto;
+}

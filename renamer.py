@@ -104,7 +104,7 @@ if __name__ == "__main__":
     VAULT_PATH = "../../Josh's Vault"
     
     print("Renaming daily notes (DRY RUN)")
-    result = rename_daily_notes(VAULT_PATH, dry_run=True)
+    # result = rename_daily_notes(VAULT_PATH, dry_run=True)
     
     # Uncomment this line to actually perform the renaming:
-    # result = rename_daily_notes(VAULT_PATH, dry_run=False)
+    result = rename_daily_notes(VAULT_PATH, dry_run=False)

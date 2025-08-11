@@ -1,0 +1,9 @@
+/* Hide the add property button */
+.metadata-add-button {
+    display: none !important;
+}
+
+/* Alternative - hide the entire add property row */
+.metadata-property-add {
+    display: none !important;
+}
