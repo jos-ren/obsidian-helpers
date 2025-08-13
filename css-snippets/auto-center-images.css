@@ -1,23 +1,45 @@
-/* Center all images in reading view */
-.markdown-preview-view img {
-    display: block;
-    margin: 0 auto;
-}
-
-/* Center all images in editing view */
-.markdown-source-view img {
-    display: block;
-    margin: 0 auto;
-}
-
-/* Center embedded images (wiki-link style) */
+/* Default: Center all images */
+.markdown-preview-view img,
+.markdown-source-view img,
 .internal-embed img {
     display: block;
     margin: 0 auto;
 }
 
-/* Alternative - target all images universally */
-img {
+/* Right alignment when |right is specified */
+.internal-embed[alt*="right"] img,
+img[alt*="right"] {
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: 0;
+    float: right;
+    clear: right;
+}
+
+/* Left alignment when |left is specified */
+.internal-embed[alt*="left"] img,
+img[alt*="left"] {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    float: left;
+    clear: left;
+}
+
+/* Alternative approach using Obsidian's built-in classes */
+.image-embed[src*="|right"] {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.image-embed[src*="|left"] {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Ensure text wraps around floated images */
+.markdown-preview-view p {
+    overflow: auto;
 }
